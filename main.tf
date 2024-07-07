@@ -5,6 +5,12 @@ terraform {
       version = "~>3.0"
     }
   }
+  backend "azurerm" {
+    resource_group_name  = "azureautomation-rg" 
+    storage_account_name = "tfstorageaccx"
+    container_name       = "sdlmdevtfstatefile"
+    key                  = "terraform.tfstate"
+  }
 }
 
 provider "azurerm" {
@@ -13,5 +19,5 @@ provider "azurerm" {
 
 resource "azurerm_resource_group" "rg" {
   location = "East US"
-  name     = "azus-rg-demo-001"
+  name     = "azus-rg-demo-002"
 }
