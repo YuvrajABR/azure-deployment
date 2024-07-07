@@ -6,13 +6,12 @@ terraform {
     }
   }
   backend "azurerm" {
-    resource_group_name  = "azureautomation-rg" 
+    resource_group_name  = "azureautomation-rg"
     storage_account_name = "tfstorageaccx"
     container_name       = "sdlmdevtfstatefile"
     key                  = "terraform.tfstate"
   }
 }
-
 provider "azurerm" {
   features {}
 }
