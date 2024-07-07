@@ -5,12 +5,12 @@ terraform {
       version = "~>3.0"
     }
   }
-  backend "azurerm" {
-    resource_group_name  = "azureautomation-rg"
-    storage_account_name = "tfstorageaccx"
-    container_name       = "sdlmdevtfstatefile/azus-rg-demo-002"
-    key                  = "terraform.tfstate"
-  }
+#   backend "azurerm" {
+#     resource_group_name  = "azureautomation-rg"
+#     storage_account_name = "tfstorageaccx"
+#     container_name       = "sdlmdevtfstatefile/azus-rg-demo-002"
+#     key                  = "terraform.tfstate"
+#   }
 }
 provider "azurerm" {
   features {}
